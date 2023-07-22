@@ -22,9 +22,9 @@ export function AppLayout({ title, children }) {
   return (
     <div className={styles.layout} data-app-version={CURRENT_VERSION}>
       {allowUpdate && <UpdateNotice />}
-      <Head>
+      {/* <Head>
         <title>{title ? `${title} | umami` : 'umami'}</title>
-      </Head>
+      </Head> */}
       <nav className={styles.nav}>
         <NavBar />
       </nav>

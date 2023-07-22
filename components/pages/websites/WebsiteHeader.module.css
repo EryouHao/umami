@@ -27,3 +27,10 @@
 .selected {
   font-weight: bold;
 }
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+}

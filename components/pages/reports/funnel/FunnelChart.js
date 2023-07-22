@@ -38,6 +38,7 @@ export function FunnelChart({ className, loading }) {
         label: formatMessage(labels.uniqueVisitors),
         data: data,
         borderWidth: 1,
+        borderRadius: 6,
         ...colors.chart.visitors,
       },
     ];

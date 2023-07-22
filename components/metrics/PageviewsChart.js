@@ -15,13 +15,19 @@ export function PageviewsChart({ websiteId, data, unit, className, loading, ...p
       {
         label: formatMessage(labels.uniqueVisitors),
         data: data.sessions,
-        borderWidth: 1,
+        borderWidth: 0,
+        borderRadius: 3,
+        barPercentage: 0.618,
+        borderDash: [8, 4],
         ...colors.chart.visitors,
       },
       {
         label: formatMessage(labels.pageViews),
         data: data.pageviews,
-        borderWidth: 1,
+        borderWidth: 0,
+        borderRadius: 3,
+        barPercentage: 0.618,
+        borderDash: [8, 4],
         ...colors.chart.views,
       },
     ];

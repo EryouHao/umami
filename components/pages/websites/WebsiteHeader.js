@@ -2,17 +2,21 @@ import classNames from 'classnames';
 import { Flexbox, Row, Column, Text, Button, Icon } from 'react-basics';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import Favicon from 'components/common/Favicon';
+// import Favicon from 'components/common/Favicon';
 import ActiveUsers from 'components/metrics/ActiveUsers';
 import styles from './WebsiteHeader.module.css';
 import Icons from 'components/icons';
-import { useMessages, useWebsite } from 'hooks';
+import { useMessages } from 'hooks';
+
+import LanguageButton from 'components/input/LanguageButton';
+import ThemeButton from 'components/input/ThemeButton';
+import SettingsButton from 'components/input/SettingsButton';
 
 export function WebsiteHeader({ websiteId, showLinks = true, children }) {
   const { formatMessage, labels } = useMessages();
   const { pathname } = useRouter();
-  const { data: website } = useWebsite(websiteId);
-  const { name, domain } = website || {};
+  // const { data: website } = useWebsite(websiteId);
+  // const { name, domain } = website || {};
 
   const links = [
     {
@@ -39,10 +43,10 @@ export function WebsiteHeader({ websiteId, showLinks = true, children }) {
 
   return (
     <Row className={styles.header} justifyContent="center">
-      <Column className={styles.title} variant="two">
+      {/* <Column className={styles.title} variant="three">
         <Favicon domain={domain} />
         <Text>{name}</Text>
-      </Column>
+      </Column> */}
       <Column className={styles.actions} variant="two">
         <ActiveUsers websiteId={websiteId} />
         {showLinks && (
@@ -67,6 +71,11 @@ export function WebsiteHeader({ websiteId, showLinks = true, children }) {
           </Flexbox>
         )}
         {children}
+      </Column>
+      <Column className={styles.buttons} variant="two">
+        <ThemeButton tooltipPosition="bottom" />
+        <LanguageButton tooltipPosition="bottom" menuPosition="bottom" />
+        <SettingsButton />
       </Column>
     </Row>
   );

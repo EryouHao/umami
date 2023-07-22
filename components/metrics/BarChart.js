@@ -65,6 +65,7 @@ export function BarChart({
           },
           border: {
             color: colors.chart.line,
+            dash: [5, 15],
           },
           ticks: {
             color: colors.chart.text,
@@ -83,6 +84,7 @@ export function BarChart({
           },
           border: {
             color: colors.chart.line,
+            dash: [5, 15],
           },
           ticks: {
             color: colors.text,

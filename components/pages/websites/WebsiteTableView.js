@@ -46,14 +46,14 @@ export default function WebsiteTableView({ websiteId }) {
           <CountriesTable {...tableProps} onDataLoad={setCountryData} />
         </GridColumn>
       </GridRow>
-      <GridRow>
+      {/* <GridRow>
         <GridColumn xs={12} sm={12} md={12} lg={4} defaultSize={4}>
           <EventsTable {...tableProps} />
         </GridColumn>
         <GridColumn xs={12} sm={12} md={12} lg={8} defaultSize={8}>
           <EventsChart websiteId={websiteId} />
         </GridColumn>
-      </GridRow>
+      </GridRow> */}
     </>
   );
 }

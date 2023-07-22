@@ -122,7 +122,7 @@ export const ROLE_PERMISSIONS = {
 
 export const THEME_COLORS = {
   light: {
-    primary: '#2680eb',
+    primary: '#3a5ccc',
     gray50: '#ffffff',
     gray75: '#fafafa',
     gray100: '#f5f5f5',
@@ -136,7 +136,7 @@ export const THEME_COLORS = {
     gray900: '#2c2c2c',
   },
   dark: {
-    primary: '#2680eb',
+    primary: '#3a5ccc',
     gray50: '#252525',
     gray75: '#2f2f2f',
     gray100: '#323232',
@@ -166,9 +166,8 @@ export const EVENT_COLORS = [
   '#ffec16',
 ];
 
-export const DOMAIN_REGEX = 
+export const DOMAIN_REGEX =
   /^(localhost(:[1-9]\d{0,4})?|((?=[a-z0-9-]{1,63}\.)(xn--)?[a-z0-9-]+(-[a-z0-9-]+)*\.)+(xn--)?[a-z0-9-]{2,63})$/;
-
 
 export const SHARE_ID_REGEX = /^[a-zA-Z0-9]{16}$/;
 

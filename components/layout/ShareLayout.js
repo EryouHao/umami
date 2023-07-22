@@ -1,13 +1,13 @@
 import { Container } from 'react-basics';
-import Header from './Header';
+// import Header from './Header';
 import Footer from './Footer';
 
 export function ShareLayout({ children }) {
   return (
     <Container>
-      <Header />
+      {/* <Header /> */}
       <main>{children}</main>
-      <Footer />
+      {/* <Footer /> */}
     </Container>
   );
 }

@@ -55,6 +55,7 @@ export function EventsChart({ websiteId, className, token }) {
         backgroundColor: color.alpha(0.6).toRgbString(),
         borderColor: color.alpha(0.7).toRgbString(),
         borderWidth: 1,
+        borderRadius: 6,
       };
     });
   }, [data, isLoading, startDate, endDate, unit]);
